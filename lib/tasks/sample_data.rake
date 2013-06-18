@@ -27,7 +27,8 @@ end
 def make_microposts
   users = User.all(limit: 6)
   50.times do
-    content = Faker::Lorem.sentence(5)
+    # content = Faker::Lorem.sentence(5)
+    content="Hello!Today I was working at the graphic design. I wrote 3 new functions, which allows user create and update his profiles. Also I made new registration form. "
     users.each { |user| user.microposts.create!(content: content) }
   end
 end
